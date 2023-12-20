@@ -23,10 +23,8 @@ public class Interface {
             System.out.println("6. List Unidade Curricular");
             System.out.println("7. Exit");
             System.out.print("Enter your choice: ");
-
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume the newline character
-
             switch (choice) {
                 case 1:
                     addProfessor(professores);
@@ -57,29 +55,21 @@ public class Interface {
     }
     private static void addProfessor(List<Professor> professores) {
         System.out.println("\n===== Add Professor =====");
-
         //Chamar utilizador
         System.out.print("Enter Professor's username: ");
         String username = scanner.nextLine();
-
         System.out.print("Enter Professor's password: ");
         String password = scanner.nextLine();
-
         System.out.print("Enter Professor's name: ");
         String nome = scanner.nextLine();
-
         System.out.print("Enter Professor's registration number: ");
         String numeroMecanografico = scanner.nextLine();
-
         System.out.print("Enter Professor's start date of functions (YYYY-MM-DD): ");
         String startDateString = scanner.nextLine();
         LocalDate inicioFuncoes = LocalDate.parse(startDateString);
-
         // You may want to add more input prompts based on your Professor class attributes
-
         Professor professor = new Professor(username, password, nome, numeroMecanografico, inicioFuncoes, null);
         professores.add(professor);
-
         System.out.println("Professor added successfully!");
     }
     // Implement similar methods for adding Curso and UnidadeCurricular

@@ -1,44 +1,20 @@
 package backend;
-
-public class Administrador {
-
+public class Administrador extends Utilizador {
     private String username;
     private String password;
-
-    public Administrador(String username, String password) {
+    private String nome;
+    // Constructor
+    public Administrador(String username, String password, String nome) {
+        super(username, password);
         this.username = username;
         this.password = password;
     }
-
-    // Getter and Setter methods for username and password
-    public String getUsername() {
-        return username;
+    // Getter and Setter methods
+    // (Note: You can inherit the getters and setters for 'username' and 'password' from the Utilizador class)
+    public String getNome() {
+        return nome;
     }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    // Additional methods for the Administrador class
-    public void adicionarProfessor(Professor professor) {
-        // Add logic to add a professor to the system
-    }
-
-    public void removerProfessor(Professor professor) {
-        // Add logic to remove a professor from the system
-    }
-
-    public void criarCurso(Curso curso) {
-        // Add logic to create a new course in the system
-    }
-
-    // ... other methods as needed
 }

@@ -1,15 +1,11 @@
 package backend;
-
 import java.time.LocalDate;
 import java.util.List;
-
 public class Professor extends Utilizador {
-
     private String nome;
     private String numeroMecanografico;
     private LocalDate inicioFuncoes;
     private List<UnidadeCurricular> unidadesCurricularesLecionadas;
-
     public Professor(String username, String password, String nome, String numeroMecanografico, LocalDate inicioFuncoes, List<UnidadeCurricular> unidadesCurricularesLecionadas) {
         super(username, password); // Call the constructor of the superclass
         this.nome = nome;
