@@ -1,7 +1,6 @@
 package backend;
 
 public class Utilizador {
-
     private final String username;
     private final String password;
 
